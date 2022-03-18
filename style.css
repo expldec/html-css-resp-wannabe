@@ -78,6 +78,56 @@ img {
 /* andare a riselezionare tutti gli stessi selettori per neutralizzare */
 /* le regole disordinate che c'erano all'inizio */
 
+/* STILIZZAZIONE PER TABLET */
+
+@media screen and (max-width: 768px) {
+  
+  .row {
+    width: 90%;
+    padding: 1rem 0;;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  img,
+  #lezioni .row img {
+    width: auto;
+    height: 6rem;
+    padding: 0;
+  }
+  
+  #lezioni .row>.left,
+  #lezioni .row>.right,
+  #steps .row>.left,
+  #steps .row>.central,
+  #steps .row>.right,
+  #why .row>.first,
+  #why .row>.second,
+  #why .row>.third {
+    margin: 0 0.5rem 2rem;
+  }
+
+  #lezioni .row>.left,
+  #lezioni .row>.right {
+    width: calc(50% - 1rem);
+  }
+
+  #steps .row>.left,
+  #steps .row>.central,
+  #steps .row>.right {
+    width: calc(33% - 1rem);
+  }
+
+  #why .row>.first,
+  #why .row>.second,
+  #why .row>.third {
+    width: 60%;
+    margin: auto;
+  }
+
+}
+
+/* Stilizzazione mobile */
 
 @media screen and (max-width: 419px) {
   body {
@@ -89,7 +139,6 @@ img {
   }
   .row {
     width: 100%;
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -115,4 +164,10 @@ img {
     height: auto;
     padding: 0;
   }
+  
+  #why .row img {
+    width: 60%;
+    box-sizing: border-box;
+  }
+
 }
